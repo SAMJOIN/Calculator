@@ -5,7 +5,7 @@ const OperationButton = (props) => {
     const expressions = /\+|\-|\*|\/| /;
     const lastNumber = props.counts[props.counts.length -1];
     const checkExpressions = () => {
-        if (!expressions.test(lastNumber))
+        if (!expressions.test(lastNumber) && props.counts.length != 0)
             props.calculation(props.counts + props.expression)
     }
 
